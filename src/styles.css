@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+   /*  background: #2c3e50;  fallback for old browsers 
+    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);   Chrome 10-25, Safari 5.1-6 
+    background: linear-gradient(to right, #3498db, #2c3e50);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url("https://img.freepik.com/vector-premium/lindo-patron-transparente-senales-trafico-semaforos-sobre-fondo-blanco-ilustracion-estilo-dibujado-mano-diseno-habitacion-ninos-papel-tapiz-textil-vector_103291-504.jpg?w=2000");
+    background-repeat: repeat;
+    background-size: contain;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding:0;
+  
+}
+
+.titulo{
+    font-size: 24px;
+    color: #f3f7fb;
+    margin-bottom: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.logo {
+  max-width: 250px;
+  display: block;
+  margin: 20px auto 0;
+  margin-top: 70px;
+}
+
+
+  footer{
+    color: azure;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }

@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <img src="/assets/img/LOGOv2png.png" alt="logo" class="logo">
+                <div class="card-body text-center">
+                    <span class="titulo">Número</span>
+                    <form class="mt-3" [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
+                        <div class="mb-3">
+                            <input type="tel" formControlName="numero" class="form-control form-control-lg" placeholder="Ingrese número de Celúlar" required minlength="10" maxlength="10">
+                            <div class="text-danger" *ngIf="usuarioForm.get('numero')?.hasError('required') && usuarioForm.get('numero')?.touched">
+                                <span>Debe ingresar un <strong>Número de Celular válido</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <select [(ngModel)]="SelectedCP.idCardinal" formControlName="localizacion" class="form-control form-control-lg" required >
+                                <option *ngFor="let punto of puntos" value={{punto.idCardinal}}>
+                                    {{punto.nombre}}
+                                </option>
+                            </select>
+                            <div class="text-danger" *ngIf="usuarioForm.get('localizacion')?.hasError('required') && usuarioForm.get('localizacion')?.touched">
+                                <span>Debe ingresar una <strong>Localización válida</strong></span>
+                            </div>
+                        </div> 
+                        <div class="mb-3">
+                         <button type="submit" class="btn btn-success" [disabled]="usuarioForm.invalid">REGISTRAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
